@@ -129,5 +129,5 @@ export default NextAuth({
   session: {
     strategy: "jwt", // Use JWT strategy for session management
   },
-  secret: "http://localhost:5000", // Ensure this is set in your environment
+  secret: "https://spinbet-backend-c481852c4a7d.herokuapp.com/", // Ensure this is set in your environment
 });
