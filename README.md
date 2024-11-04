@@ -101,6 +101,7 @@ Sample Credentials
 
 - Email: angelyndoe@gmail.com
 - Password: passw0rd
+
 URL
 - You can access the deployed application at: https://spinbet-frontend.vercel.app/
 
