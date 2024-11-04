@@ -12,7 +12,6 @@ export const formatLabel = (firstName: string, lastName: string): string => {
  return `${formattedFirstName} ${formattedLastName}`; // Customize as needed
 };
 
-
 export const formatParticipationData = (data: Array<{ firstName: string; lastName: string }>): string[] => {
  return data.map(participant => formatLabel(participant.firstName, participant.lastName));
 };
