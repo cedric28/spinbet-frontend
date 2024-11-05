@@ -47,10 +47,10 @@ const ParticipationTable: React.FC<ParticipationTableProps> = ({
       <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
         <thead>
           <tr className="bg-gray-200">
-            <th className="py-2 px-4">First name</th>
-            <th className="py-2 px-4">Last name</th>
-            <th className="py-2 px-4">Participation</th>
-            <th className="py-2 px-4">Action</th>
+            <th className="py-2 px-4 text-black">First name</th>
+            <th className="py-2 px-4 text-black">Last name</th>
+            <th className="py-2 px-4 text-black">Participation</th>
+            <th className="py-2 px-4 text-black">Action</th>
           </tr>
         </thead>
         <tbody>
