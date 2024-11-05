@@ -111,9 +111,9 @@ const ParticipationTable: React.FC<ParticipationTableProps> = ({
                 </tr>
               ) : (
                 <tr key={row.id} className="border-b">
-                  <td className="text-center">{capitalizeFirstLetter(row.firstName)}</td>
-                  <td className="text-center">{capitalizeFirstLetter(row.lastName)}</td>
-                  <td className="text-center">{row.percentage}%</td>
+                  <td className="text-center text-black">{capitalizeFirstLetter(row.firstName)}</td>
+                  <td className="text-center text-black">{capitalizeFirstLetter(row.lastName)}</td>
+                  <td className="text-center text-black">{row.percentage}%</td>
                   <td>
                     <div className="flex gap-2 justify-center">
                       <button 
