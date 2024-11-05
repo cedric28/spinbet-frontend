@@ -25,7 +25,7 @@ const InputField = <T extends FieldValues>({
       {...register(name, options)}
       type={type}
       placeholder={placeholder}
-      className={`p-2 rounded border ${error ? 'border-red-500' : 'border-gray-300'}`}
+      className={`text-black p-2 rounded border ${error ? 'border-red-500' : 'border-gray-300'}`}
       {...rest}
     />
     <span className={`text-red-500 mt-1 h-4 ${error ? 'block' : 'hidden'}`}>
