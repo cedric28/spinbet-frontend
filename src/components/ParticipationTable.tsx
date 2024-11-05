@@ -66,6 +66,7 @@ const ParticipationTable: React.FC<ParticipationTableProps> = ({
                       options={{ required: 'First name is required' }}
                       error={errors[`firstName_${row.id}`]}
                       defaultValue={row.firstName}
+                      className="w-full"
                     />
                   </td>
                   <td>
@@ -76,6 +77,7 @@ const ParticipationTable: React.FC<ParticipationTableProps> = ({
                       options={{ required: "Last name is required" }}
                       error={errors[`lastName_${row.id}`]}
                       defaultValue={row.lastName}
+                      className="w-full"
                     />
                   </td>
                   <td>
@@ -87,11 +89,24 @@ const ParticipationTable: React.FC<ParticipationTableProps> = ({
                       options={{ required: "Participation is required", valueAsNumber: true }}
                       error={errors[`percentage_${row.id}`]}
                       defaultValue={row.percentage}
+                      className="w-full"
                     />
                   </td>
                   <td>
-                    <button onClick={() => onSave(row.id)} className="bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Save</button>
-                    <button onClick={handleCancel} className="bg-red-600 text-white font-semibold py-2 px-4 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">Cancel</button>
+                    <div className="flex flex-col md:flex-row gap-2">
+                      <button 
+                        onClick={() => onSave(row.id)} 
+                        className="bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full md:w-auto"
+                      >
+                        Save
+                      </button>
+                      <button 
+                        onClick={handleCancel} 
+                        className="bg-red-600 text-white font-semibold py-2 px-4 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 w-full md:w-auto"
+                      >
+                        Cancel
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ) : (
@@ -100,8 +115,20 @@ const ParticipationTable: React.FC<ParticipationTableProps> = ({
                   <td className="text-center">{capitalizeFirstLetter(row.lastName)}</td>
                   <td className="text-center">{row.percentage}%</td>
                   <td>
-                    <button onClick={() => onEdit(row.id)} className="bg-green-600 text-white font-semibold py-2 px-4 mt-2 mb-2 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 mr-2">Edit</button>
-                    <button onClick={() => onDelete(row.id)} className="bg-red-600 text-white font-semibold py-2 px-4 mt-2 mb-2 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">Delete</button>
+                    <div className="flex gap-2 justify-center">
+                      <button 
+                        onClick={() => onEdit(row.id)} 
+                        className="bg-green-600 text-white font-semibold py-2 px-4 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 w-full md:w-auto"
+                      >
+                        Edit
+                      </button>
+                      <button 
+                        onClick={() => onDelete(row.id)} 
+                        className="bg-red-600 text-white font-semibold py-2 px-4 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 w-full md:w-auto"
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </td>
                 </tr>
               )
